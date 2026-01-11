@@ -18,9 +18,9 @@ export const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-28">
             <a href="#" className="flex-shrink-0">
-              <img src="/logo.png" alt="Codework" className="h-24 w-auto object-contain" />
+              <img src="/logo.png" alt="Codework" className="h-28 w-auto object-contain" />
             </a>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -35,7 +35,7 @@ export const Header = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-5 py-2 border border-black text-sm font-medium rounded-full text-black hover:bg-black hover:text-white transition-all duration-300"
             >
-              Contato
+              Pedir Orçamento
             </a>
           </div>
 

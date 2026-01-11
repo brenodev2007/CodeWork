@@ -1,4 +1,4 @@
-import { Zap, Smartphone, FileCode } from 'lucide-react';
+import { Zap, Smartphone, FileCode, Timer } from 'lucide-react';
 
 export const Differentiators = () => {
   return (
@@ -29,6 +29,11 @@ export const Differentiators = () => {
                   icon: FileCode,
                   title: 'Código Limpo e Escalável',
                   desc: 'Arquitetura de software pensada para fácil manutenção e crescimento futuro.'
+                },
+                {
+                  icon: Timer,
+                  title: 'Velocidade na Entrega',
+                  desc: 'Processo ágil e eficiente. Receba seu projeto em tempo recorde sem perder qualidade.'
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4">
@@ -45,19 +50,68 @@ export const Differentiators = () => {
           </div>
           
           <div className="relative">
-             <div className="aspect-square rounded-2xl bg-white border border-gray-100 shadow-2xl p-8 flex flex-col justify-center items-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
-                <div className="text-center z-10">
-                   <div className="text-6xl font-bold mb-2">100<span className="text-green-500 text-4xl">%</span></div>
-                   <p className="text-gray-500 font-medium">Performance Score</p>
-                   <div className="w-full h-2 bg-gray-100 rounded-full mt-6 overflow-hidden">
-                     <div className="h-full bg-green-500 w-full animate-pulse"></div>
+             <div className="relative z-10 bg-white border border-gray-200 rounded-3xl shadow-2xl p-8 animate-fade-in-up">
+                <div className="mb-8">
+                   <h3 className="text-xl font-bold mb-2">Comparativo de Mercado</h3>
+                   <p className="text-gray-500 text-sm">Veja por que somos a escolha técnica superior.</p>
+                </div>
+
+                <div className="space-y-8">
+              
+                   <div>
+                      <div className="flex justify-between text-sm font-medium mb-2">
+                         <span>Performance (Google LCP)</span>
+                         <span className="text-green-600 font-bold">10x mais rápido</span>
+                      </div>
+                      <div className="relative h-4 bg-gray-100 rounded-full overflow-hidden">
+                       
+                         <div className="absolute top-0 left-0 h-full bg-gray-300 w-[30%] rounded-full"></div>
+                      
+                         <div className="absolute top-0 left-0 h-full bg-black w-[95%] rounded-full shadow-lg" style={{ zIndex: 10 }}></div>
+
+                      </div>
+                   </div>
+
+                 
+                   <div>
+                      <div className="flex justify-between text-sm font-medium mb-2">
+                         <span>Otimização SEO</span>
+                         <span className="text-green-600 font-bold">Estrutura Nativa</span>
+                      </div>
+                      <div className="relative h-4 bg-gray-100 rounded-full overflow-hidden">
+                         <div className="absolute top-0 left-0 h-full bg-gray-300 w-[45%] rounded-full"></div>
+                         <div className="absolute top-0 left-0 h-full bg-black w-[100%] rounded-full shadow-lg" style={{ zIndex: 10 }}></div>
+                      </div>
+                   </div>
+
+                   {/* Metric 3 */}
+                   <div>
+                      <div className="flex justify-between text-sm font-medium mb-2">
+                         <span>Manutenibilidade</span>
+                         <span className="text-green-600 font-bold">Código Limpo</span>
+                      </div>
+                      <div className="relative h-4 bg-gray-100 rounded-full overflow-hidden">
+                         <div className="absolute top-0 left-0 h-full bg-gray-300 w-[40%] rounded-full"></div>
+                         <div className="absolute top-0 left-0 h-full bg-black w-[90%] rounded-full shadow-lg" style={{ zIndex: 10 }}></div>
+                      </div>
+                   </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                   <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-black rounded-full"></div>
+                      <span>Codework</span>
+                   </div>
+                   <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-gray-300 rounded-full"></div>
+                      <span>Concorrência Comum</span>
                    </div>
                 </div>
              </div>
-             {/* Decorative elements */}
-             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-black rounded-xl -z-10 opacity-10 rotate-12"></div>
-             <div className="absolute -top-6 -left-6 w-32 h-32 bg-gray-200 rounded-full -z-10 opacity-20 blur-xl"></div>
+             
+             {/* Decorative Background Elements */}
+             <div className="absolute top-10 -right-10 w-40 h-40 bg-blue-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
           </div>
         </div>
       </div>

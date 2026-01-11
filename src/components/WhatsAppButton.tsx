@@ -12,8 +12,8 @@ export const WhatsAppButton = () => {
       aria-label="Fale conosco no WhatsApp"
     >
       <MessageCircle className="w-6 h-6" />
-      <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap opacity-0 group-hover:opacity-100">
-        Fale Conosco
+      <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-in-out whitespace-nowrap opacity-0 group-hover:opacity-100 font-medium">
+        Transformar minha ideia em site
       </span>
     </a>
   );
