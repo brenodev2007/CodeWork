@@ -31,7 +31,7 @@ export const Projects = () => {
         <div className="text-center mb-16">
           <span className="text-primary font-semibold uppercase tracking-widest text-sm mb-4 block animate-pulse">Portfolio</span>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight">
-            Projetos que <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Definem o Futuro</span>
+            Projetos que <span className="text-primary">Definem o Futuro</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Uma seleção de trabalhos onde a tecnologia atende ao design de alta performance.

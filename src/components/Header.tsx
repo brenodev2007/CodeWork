@@ -7,8 +7,9 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -16,7 +17,10 @@ export const Header = () => {
   const whatsappLink = "https://wa.me/5511940512636?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codework%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass' : 'bg-transparent'}`}>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b 
+      ${isScrolled ? 'glass' : 'bg-transparent border-transparent shadow-none'}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 md:h-24">
             <a href="#" className="flex-shrink-0 font-bold text-2xl tracking-tighter text-white">

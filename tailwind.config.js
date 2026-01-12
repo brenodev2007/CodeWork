@@ -12,8 +12,8 @@ export default {
       colors: {
         background: '#050505', // Deep Black
         foreground: '#F0F0F0', // Off-white
-        primary: '#00E5FF',    // Electric Cyan
-        secondary: '#B026FF',  // Neon Purple
+        primary: '#1D4ED8',    // Deep Professional Blue (Blue-700)
+        secondary: '#6D28D9',  // Deep Violet (Violet-700)
         accent: '#00FF94',     // Cyber Green
         surface: 'rgba(255, 255, 255, 0.05)', // Glassmorphism surface
         "surface-hover": 'rgba(255, 255, 255, 0.1)',

@@ -12,7 +12,7 @@ export const About = () => {
               Sobre a Codework
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-white">
-              Não somos apenas devs. Somos parceiros de <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">evolução digital.</span>
+              Não somos apenas devs. Somos parceiros de <span className="text-primary">evolução digital.</span>
             </h2>
             <p className="text-lg text-gray-400 mb-6 leading-relaxed">
               Nascemos com um objetivo claro: eliminar a complexidade do desenvolvimento web e entregar produtos digitais que realmente funcionam e escalam.
