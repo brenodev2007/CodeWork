@@ -20,11 +20,11 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-20 md:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 md:py-32 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Soluções Sob Medida</h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">Soluções Sob Medida</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Combinamos design premium com código de alta performance para entregar resultados reais.
           </p>
         </div>
@@ -33,13 +33,13 @@ export const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group p-8 rounded-2xl border border-gray-100 bg-white hover:shadow-lg hover:border-gray-200 transition-all duration-300"
+              className="group glass-card p-8 hover:-translate-y-2"
             >
-              <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-colors duration-300">
-                <service.icon className="w-6 h-6" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 bg-white/5 border border-white/10 group-hover:bg-primary group-hover:text-black transition-all duration-300 shadow-[0_0_10px_rgba(0,0,0,0.2)] group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)]">
+                <service.icon className="w-6 h-6 text-primary group-hover:text-black transition-colors" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-500 leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
+              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300">
                 {service.description}
               </p>
             </div>

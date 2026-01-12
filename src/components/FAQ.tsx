@@ -24,11 +24,11 @@ export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 relative">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Dúvidas Frequentes</h2>
-          <p className="text-gray-500">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">Dúvidas Frequentes</h2>
+          <p className="text-gray-400">
             Tire suas dúvidas antes de fechar negócio. Transparência total.
           </p>
         </div>
@@ -37,15 +37,21 @@ export const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-md"
+              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                openIndex === index 
+                ? 'bg-white/10 border-primary/50 shadow-lg' 
+                : 'bg-white/5 border-white/10 hover:bg-white/10'
+              }`}
             >
               <button
                 className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                <span className={`text-lg font-semibold transition-colors ${openIndex === index ? 'text-white' : 'text-gray-300'}`}>
+                  {faq.question}
+                </span>
                 {openIndex === index ? (
-                  <Minus className="w-5 h-5 text-gray-500" />
+                  <Minus className="w-5 h-5 text-primary" />
                 ) : (
                   <Plus className="w-5 h-5 text-gray-500" />
                 )}
@@ -56,7 +62,7 @@ export const FAQ = () => {
                   openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="p-6 pt-0 text-gray-600 leading-relaxed">
+                <div className="p-6 pt-0 text-gray-400 leading-relaxed border-t border-white/5 mt-2 pt-4">
                   {faq.answer}
                 </div>
               </div>
