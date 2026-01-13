@@ -14,7 +14,7 @@ const steps = [
   {
     icon: Code,
     title: 'Desenvolvimento',
-    description: 'Codificamos seu site utilizando React e Node, garantindo performance e segurança.'
+    description: 'Construímos seu site utilizando as melhores tecnologias do mercado, garantindo rapidez e segurança.'
   },
   {
     icon: Rocket,

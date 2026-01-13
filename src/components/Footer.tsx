@@ -43,10 +43,7 @@ export const Footer = () => {
                <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black text-white/70 transition-colors duration-300 border border-white/10">
                   <Instagram className="w-5 h-5" />
                </a>
-               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black text-white/70 transition-colors duration-300 border border-white/10">
-                  <Linkedin className="w-5 h-5" />
-               </a>
-               <a href="mailto:contato@codework.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black text-white/70 transition-colors duration-300 border border-white/10">
+               <a href="mailto:codeworkbr.contact@gmail.com" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-black text-white/70 transition-colors duration-300 border border-white/10">
                   <Mail className="w-5 h-5" />
                </a>
             </div>
@@ -74,7 +71,7 @@ export const Footer = () => {
                     WhatsApp Comercial
                   </a>
                 </li>
-                <li><a href="mailto:contato@codework.com" className="hover:text-primary transition-colors">contato@codework.com</a></li>
+                <li><a href="mailto:codeworkbr.contact@gmail.com" className="hover:text-primary transition-colors">codeworkbr.contact@gmail.com</a></li>
                 <li className="pt-2">
                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-semibold border border-green-500/20">
                       <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>

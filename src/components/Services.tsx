@@ -2,18 +2,18 @@ import { Layout, Globe, Search } from 'lucide-react';
 
 const services = [
   {
-    title: 'Landing Pages de Alta Conversão',
-    description: 'Páginas projetadas psicologicamente para transformar visitantes em clientes, com design limpo e chamadas para ação estratégicas.',
+    title: 'Sites Focados em Vendas',
+    description: 'Páginas criadas estrategicamente para transformar visitantes em clientes, com design atraente e botões que chamam atenção.',
     icon: Layout,
   },
   {
-    title: 'Aplicações Web com React & Node',
-    description: 'Sistemas robustos e escaláveis. Dashboards, CRMs e plataformas completas desenvolvidas com a stack mais moderna do mercado.',
+    title: 'Sistemas Personalizados',
+    description: 'Painéis administrativos, sistemas de gestão e plataformas completas feitas sob medida para as necessidades do seu negócio.',
     icon: Globe,
   },
   {
-    title: 'Sites Otimizados para Google',
-    description: 'Estrutura técnica impecável para SEO. Garanta que seu site seja encontrado e carregue instantaneamente em qualquer dispositivo.',
+    title: 'Apareça no Google',
+    description: 'Seu site otimizado para ser encontrado facilmente nas pesquisas e carregar instantaneamente no celular do seu cliente.',
     icon: Search,
   },
 ];
@@ -25,7 +25,7 @@ export const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-white">Soluções Sob Medida</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Combinamos design premium com código de alta performance para entregar resultados reais.
+            Design premium e funcionamento perfeito para entregar resultados reais para sua empresa.
           </p>
         </div>
 

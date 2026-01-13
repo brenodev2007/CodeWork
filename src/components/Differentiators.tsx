@@ -10,15 +10,15 @@ export const Differentiators = () => {
               Por que escolher a <span className="text-primary">Codework?</span>
             </h2>
             <p className="text-gray-400 mb-8 text-lg leading-relaxed">
-              Não entregamos apenas código. Entregamos ativos digitais performáticos que impulsionam o seu negócio. Nosso foco é a excelência técnica.
+              Não entregamos apenas um site. Entregamos uma ferramenta de vendas poderosa para o seu negócio. Nosso foco é o seu resultado.
             </p>
             
             <div className="space-y-6">
               {[
                 {
                   icon: Zap,
-                  title: 'Velocidade de Carregamento (LCP)',
-                  desc: 'Otimização avançada para pontuação máxima no Core Web Vitals do Google.'
+                  title: 'Carregamento Instantâneo',
+                  desc: 'Sites ultra rápidos que não deixam seu cliente esperando.'
                 },
                 {
                   icon: Smartphone,
@@ -27,8 +27,8 @@ export const Differentiators = () => {
                 },
                 {
                   icon: FileCode,
-                  title: 'Código Limpo e Escalável',
-                  desc: 'Arquitetura de software pensada para fácil manutenção e crescimento futuro.'
+                  title: 'Segurança e Estabilidade',
+                  desc: 'Site seguro e que não sai do ar, pronto para crescer com sua empresa.'
                 },
                 {
                   icon: Timer,
@@ -53,14 +53,14 @@ export const Differentiators = () => {
              <div className="relative z-10 glass-card p-8 animate-fade-in-up">
                 <div className="mb-8 border-b border-white/10 pb-4">
                    <h3 className="text-xl font-bold mb-2 text-white">Comparativo de Mercado</h3>
-                   <p className="text-gray-500 text-sm">Benchmarks de Performance</p>
+                   <p className="text-gray-500 text-sm">Por que somos diferentes</p>
                 </div>
 
                 <div className="space-y-8">
               
                    <div>
                       <div className="flex justify-between text-sm font-medium mb-2">
-                         <span className="text-gray-300">Performance (Google LCP)</span>
+                         <span className="text-gray-300">Velocidade</span>
                          <span className="text-primary font-bold">10x mais rápido</span>
                       </div>
                       <div className="relative h-4 bg-white/5 rounded-full overflow-hidden border border-white/5">
@@ -72,7 +72,7 @@ export const Differentiators = () => {
                    <div>
                       <div className="flex justify-between text-sm font-medium mb-2">
                          <span className="text-gray-300">Otimização SEO</span>
-                         <span className="text-primary font-bold">Estrutura Nativa</span>
+                         <span className="text-primary font-bold">Otimizado</span>
                       </div>
                       <div className="relative h-4 bg-white/5 rounded-full overflow-hidden border border-white/5">
                          <div className="absolute top-0 left-0 h-full bg-white/10 w-[45%] rounded-full blur-[1px]"></div>
@@ -84,7 +84,7 @@ export const Differentiators = () => {
                    <div>
                       <div className="flex justify-between text-sm font-medium mb-2">
                          <span className="text-gray-300">Manutenibilidade</span>
-                         <span className="text-primary font-bold">Código Limpo</span>
+                         <span className="text-primary font-bold">Seguro e Estável</span>
                       </div>
                       <div className="relative h-4 bg-white/5 rounded-full overflow-hidden border border-white/5">
                          <div className="absolute top-0 left-0 h-full bg-white/10 w-[40%] rounded-full blur-[1px]"></div>

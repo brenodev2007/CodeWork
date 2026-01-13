@@ -16,12 +16,12 @@ export const Hero = () => {
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-8 max-w-5xl mx-auto leading-tight">
           Transformamos Ideias em <br className="hidden md:block" />
-          <span className="text-gradient">Realidade Digital</span>
+          <span className="text-gradient">Negócios de Sucesso</span>
         </h1>
         
         <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Desenvolvimento de software de alta performance com tecnologias modernas. 
-          Especialistas em criar interfaces imersivas e funcionais.
+          Criação de sites profissionais e modernos que transmitem confiança e aumentam suas vendas. 
+          Especialistas em destacar sua empresa na internet.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full mb-16">
@@ -43,27 +43,27 @@ export const Hero = () => {
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-10 w-full max-w-4xl">
-           <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-8">STACK TECNOLÓGICA</p>
+           <p className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-8">Nossas Ferramentas</p>
            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80">
               <div className="flex flex-col items-center gap-3 group hover:scale-110 transition-transform duration-300">
                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#00E5FF]/50 shadow-lg group-hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all">
                     <Code className="w-6 h-6 text-[#00E5FF]" />
                  </div>
-                 <span className="font-medium text-sm text-gray-400 group-hover:text-white transition-colors">React</span>
+                 <span className="font-medium text-sm text-gray-400 group-hover:text-white transition-colors">Interativo</span>
               </div>
               
               <div className="flex flex-col items-center gap-3 group hover:scale-110 transition-transform duration-300">
                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#00FF94]/50 shadow-lg group-hover:shadow-[0_0_15px_rgba(0,255,148,0.3)] transition-all">
                     <Cpu className="w-6 h-6 text-[#00FF94]" />
                  </div>
-                 <span className="font-medium text-sm text-gray-400 group-hover:text-white transition-colors">Node.js</span>
+                 <span className="font-medium text-sm text-gray-400 group-hover:text-white transition-colors">Rápido</span>
               </div>
               
               <div className="flex flex-col items-center gap-3 group hover:scale-110 transition-transform duration-300">
                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 group-hover:border-[#B026FF]/50 shadow-lg group-hover:shadow-[0_0_15px_rgba(176,38,255,0.3)] transition-all">
                     <Layers className="w-6 h-6 text-[#B026FF]" />
                  </div>
-                 <span className="font-medium text-sm text-gray-400 group-hover:text-white transition-colors">Tailwind</span>
+                 <span className="font-medium text-sm text-gray-400 group-hover:text-white transition-colors">Moderno</span>
               </div>
            </div>
         </div>

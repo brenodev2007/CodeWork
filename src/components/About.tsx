@@ -12,18 +12,18 @@ export const About = () => {
               Sobre a Codework
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-white">
-              Não somos apenas devs. Somos parceiros de <span className="text-primary">evolução digital.</span>
+              Não somos apenas desenvolvedores. Somos parceiros do <span className="text-primary">seu sucesso.</span>
             </h2>
             <p className="text-lg text-gray-400 mb-6 leading-relaxed">
               Nascemos com um objetivo claro: eliminar a complexidade do desenvolvimento web e entregar produtos digitais que realmente funcionam e escalam.
             </p>
             <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-              Enquanto o mercado oferece soluções lentas e genéricas, nós apostamos em engenharia de ponta. Unimos design futurista com a performance bruta do React e Node.js.
+              Enquanto o mercado oferece soluções lentas e complicadas, nós apostamos na simplicidade e eficiência. Unimos design moderno com tecnologia rápida para o seu site vender mais.
             </p>
             
             <div className="space-y-4">
               {[
-                "Foco total em performance e SEO",
+                "Site rápido e otimizado",
                 "Atendimento prático e sem tecniquês",
                 "Entrega ágil com qualidade garantida"
               ].map((item, index) => (

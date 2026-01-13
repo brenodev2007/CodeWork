@@ -22,6 +22,13 @@ const projects = [
     description: 'Interface bancária moderna com gráficos interativos e segurança total.',
     tech: ['React Native', 'TypeScript', 'Redis'],
   },
+  {
+    title: 'Site Institucional',
+    category: 'Presença Digital',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
+    description: 'Apresente sua empresa com profissionalismo. Design corporativo focado em fortalecer sua marca.',
+    tech: ['Identidade Visual', 'SEO Otimizado', 'Mobile'],
+  },
 ];
 
 export const Projects = () => {
