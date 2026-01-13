@@ -4,28 +4,28 @@ const projects = [
   {
     title: 'E-commerce Futuro',
     category: 'Full Stack',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800', // Tech image
+    image: '/projects/ecommerce-dashboard.png', // Tech image
     description: 'Plataforma de vendas com dashboard em tempo real e integração AI.',
     tech: ['React', 'Node.js', 'Stripe'],
   },
   {
     title: 'Sistemas de Gestão',
     category: 'Dashboard',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800', // Dashboard image
+    image: '/projects/crm-dashboard.png', // Dashboard image
     description: 'CRM completo para gestão de leads e automação de marketing.',
     tech: ['Next.js', 'Tailwind', 'PostgreSQL'],
   },
   {
     title: 'App Financeiro',
     category: 'Mobile First',
-    image: 'https://images.unsplash.com/photo-1555617914-6868e8cb8d3b?auto=format&fit=crop&q=80&w=800', // Code image
+    image: '/projects/fintech-app.png', // Code image
     description: 'Interface bancária moderna com gráficos interativos e segurança total.',
     tech: ['React Native', 'TypeScript', 'Redis'],
   },
   {
     title: 'Site Institucional',
     category: 'Presença Digital',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800',
+    image: '/projects/corporate-site.png',
     description: 'Apresente sua empresa com profissionalismo. Design corporativo focado em fortalecer sua marca.',
     tech: ['Identidade Visual', 'SEO Otimizado', 'Mobile'],
   },
