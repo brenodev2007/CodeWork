@@ -1,48 +1,85 @@
-import { Zap, Smartphone, FileCode, Timer } from 'lucide-react';
+import { Zap, Smartphone, FileCode, Timer, TrendingUp, Award } from 'lucide-react';
 
 export const Differentiators = () => {
   return (
-    <section id="differentiators" className="py-20 relative">
+    <section id="differentiators" className="py-24 relative overflow-hidden">
+      {/* Enhanced background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background -z-10" />
+      <div className="absolute inset-0 pattern-dots opacity-20 -z-10" />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight text-white">
-              Por que escolher a <span className="text-primary">Codework?</span>
-            </h2>
-            <p className="text-gray-400 mb-8 text-lg leading-relaxed">
-              Não entregamos apenas um site. Entregamos uma ferramenta de vendas poderosa para o seu negócio. Nosso foco é o seu resultado.
-            </p>
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+          <div className="space-y-8">
+            <div>
+              <span className="inline-block text-sm font-bold uppercase tracking-widest px-4 py-2 border-2 border-border rounded-full bg-muted/30 mb-6">
+                Diferenciais
+              </span>
+              
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+                Por que escolher a{' '}
+                <span className="relative inline-block">
+                  <span className="text-gradient">Codework?</span>
+                  <div className="absolute -bottom-1 left-0 right-0 h-1 bg-foreground" />
+                </span>
+              </h2>
+              
+              <p className="text-muted-foreground text-lg leading-relaxed border-l-4 border-foreground pl-6">
+                Não entregamos apenas um site. Entregamos uma ferramenta de vendas poderosa para o seu negócio. 
+                <span className="text-foreground font-semibold"> Nosso foco é o seu resultado.</span>
+              </p>
+            </div>
             
-            <div className="space-y-6">
+            <div className="space-y-6 pt-4">
               {[
                 {
                   icon: Zap,
                   title: 'Carregamento Instantâneo',
-                  desc: 'Sites ultra rápidos que não deixam seu cliente esperando.'
+                  desc: 'Sites ultra rápidos que não deixam seu cliente esperando.',
+                  stat: '10x'
                 },
                 {
                   icon: Smartphone,
                   title: 'Design Responsivo',
-                  desc: 'Experiência fluida e perfeita em celulares, tablets e desktops.'
+                  desc: 'Experiência fluida e perfeita em celulares, tablets e desktops.',
+                  stat: '100%'
                 },
                 {
                   icon: FileCode,
                   title: 'Segurança e Estabilidade',
-                  desc: 'Site seguro e que não sai do ar, pronto para crescer com sua empresa.'
+                  desc: 'Site seguro e que não sai do ar, pronto para crescer com sua empresa.',
+                  stat: '99.9%'
                 },
                 {
                   icon: Timer,
                   title: 'Velocidade na Entrega',
-                  desc: 'Processo ágil e eficiente. Receba seu projeto em tempo recorde sem perder qualidade.'
+                  desc: 'Processo ágil e eficiente. Receba seu projeto em tempo recorde sem perder qualidade.',
+                  stat: 'Ágil'
                 }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-4 group">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mt-1 group-hover:bg-primary/20 group-hover:border-primary/50 transition-colors">
-                    <item.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-white group-hover:text-primary transition-colors">{item.title}</h3>
-                    <p className="text-gray-500">{item.desc}</p>
+                <div key={idx} className="group relative">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-foreground/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                  
+                  <div className="relative flex gap-5 p-4 rounded-xl hover:bg-muted/30 transition-all duration-300">
+                    <div className="flex-shrink-0">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-foreground/20 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-muted to-background border-2 border-border group-hover:border-foreground flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg">
+                          <item.icon className="w-7 h-7" />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-2">
+                        <h3 className="font-bold text-lg group-hover:text-gradient transition-all">
+                          {item.title}
+                        </h3>
+                        <span className="text-xs font-bold px-3 py-1 bg-foreground text-background rounded-full">
+                          {item.stat}
+                        </span>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -50,64 +87,70 @@ export const Differentiators = () => {
           </div>
           
           <div className="relative">
-             <div className="relative z-10 glass-card p-8 animate-fade-in-up">
-                <div className="mb-8 border-b border-white/10 pb-4">
-                   <h3 className="text-xl font-bold mb-2 text-white">Comparativo de Mercado</h3>
-                   <p className="text-gray-500 text-sm">Por que somos diferentes</p>
+             {/* Decorative elements */}
+             <div className="absolute -top-8 -right-8 w-20 h-20 border-t-4 border-r-4 border-border rounded-tr-3xl" />
+             <div className="absolute -bottom-8 -left-8 w-20 h-20 border-b-4 border-l-4 border-border rounded-bl-3xl" />
+             
+             <div className="relative z-10 p-10 rounded-3xl border-2 border-border bg-gradient-to-br from-muted/40 to-background backdrop-blur-xl shadow-2xl">
+                <div className="mb-10 pb-6 border-b-2 border-border">
+                   <div className="flex items-center gap-3 mb-3">
+                     <Award className="w-6 h-6" />
+                     <h3 className="text-2xl font-bold">Comparativo de Mercado</h3>
+                   </div>
+                   <p className="text-muted-foreground text-sm flex items-center gap-2">
+                     <TrendingUp className="w-4 h-4" />
+                     Por que somos diferentes
+                   </p>
                 </div>
 
-                <div className="space-y-8">
-              
-                   <div>
-                      <div className="flex justify-between text-sm font-medium mb-2">
-                         <span className="text-gray-300">Velocidade</span>
-                         <span className="text-primary font-bold">10x mais rápido</span>
-                      </div>
-                      <div className="relative h-4 bg-white/5 rounded-full overflow-hidden border border-white/5">
-                         <div className="absolute top-0 left-0 h-full bg-white/10 w-[30%] rounded-full blur-[1px]"></div>
-                         <div className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary to-secondary w-[95%] rounded-full shadow-[0_0_10px_rgba(0,229,255,0.5)]" style={{ zIndex: 10 }}></div>
-                      </div>
-                   </div>
-                 
-                   <div>
-                      <div className="flex justify-between text-sm font-medium mb-2">
-                         <span className="text-gray-300">Otimização SEO</span>
-                         <span className="text-primary font-bold">Otimizado</span>
-                      </div>
-                      <div className="relative h-4 bg-white/5 rounded-full overflow-hidden border border-white/5">
-                         <div className="absolute top-0 left-0 h-full bg-white/10 w-[45%] rounded-full blur-[1px]"></div>
-                         <div className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary to-secondary w-[100%] rounded-full shadow-[0_0_10px_rgba(0,229,255,0.5)]" style={{ zIndex: 10 }}></div>
-                      </div>
-                   </div>
-
-                   {/* Metric 3 */}
-                   <div>
-                      <div className="flex justify-between text-sm font-medium mb-2">
-                         <span className="text-gray-300">Manutenibilidade</span>
-                         <span className="text-primary font-bold">Seguro e Estável</span>
-                      </div>
-                      <div className="relative h-4 bg-white/5 rounded-full overflow-hidden border border-white/5">
-                         <div className="absolute top-0 left-0 h-full bg-white/10 w-[40%] rounded-full blur-[1px]"></div>
-                         <div className="absolute top-0 left-0 h-full bg-gradient-to-r from-primary to-secondary w-[90%] rounded-full shadow-[0_0_10px_rgba(0,229,255,0.5)]" style={{ zIndex: 10 }}></div>
-                      </div>
-                   </div>
+                <div className="space-y-10">
+                   {[
+                     { label: 'Velocidade', value: 95, badge: '10x mais rápido' },
+                     { label: 'Otimização SEO', value: 100, badge: 'Otimizado' },
+                     { label: 'Manutenibilidade', value: 90, badge: 'Seguro e Estável' }
+                   ].map((metric, idx) => (
+                     <div key={idx}>
+                        <div className="flex justify-between items-center text-sm font-semibold mb-3">
+                           <span className="text-muted-foreground">{metric.label}</span>
+                           <span className="px-3 py-1 bg-foreground/10 rounded-full text-xs">
+                             {metric.badge}
+                           </span>
+                        </div>
+                        
+                        <div className="relative h-5 bg-muted/50 rounded-full overflow-hidden border-2 border-border shadow-inner">
+                           {/* Competitor bar */}
+                           <div 
+                             className="absolute top-0 left-0 h-full bg-muted-foreground/30 rounded-full transition-all duration-1000"
+                             style={{ width: `${metric.value - 60}%` }}
+                           />
+                           
+                           {/* Our bar with gradient */}
+                           <div 
+                             className="absolute top-0 left-0 h-full bg-gradient-to-r from-foreground via-muted-foreground to-foreground rounded-full shadow-lg transition-all duration-1000 delay-200"
+                             style={{ width: `${metric.value}%` }}
+                           >
+                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-gradient" />
+                           </div>
+                        </div>
+                     </div>
+                   ))}
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-white/10 flex justify-between items-center text-xs text-gray-500">
-                   <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-primary rounded-full shadow-[0_0_5px_rgba(0,229,255,0.8)] animate-pulse"></div>
-                      <span className="text-white">Codework</span>
+                <div className="mt-10 pt-8 border-t-2 border-border flex justify-between items-center text-sm">
+                   <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 bg-foreground rounded-full shadow-lg" />
+                      <span className="font-semibold">Codework</span>
                    </div>
-                   <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-white/20 rounded-full"></div>
-                      <span>Concorrência</span>
+                   <div className="flex items-center gap-3">
+                      <div className="w-4 h-4 bg-muted-foreground/30 rounded-full" />
+                      <span className="text-muted-foreground">Concorrência</span>
                    </div>
                 </div>
              </div>
              
-             {/* Decorative Background Elements */}
-             <div className="absolute top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full filter blur-3xl opacity-50 animate-blob"></div>
-             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+             {/* Floating background elements */}
+             <div className="absolute top-10 -right-10 w-52 h-52 bg-foreground/5 rounded-full filter blur-3xl animate-float" />
+             <div className="absolute -bottom-10 -left-10 w-52 h-52 bg-foreground/5 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '2s' }} />
           </div>
         </div>
       </div>

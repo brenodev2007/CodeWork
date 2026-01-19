@@ -9,24 +9,27 @@ import { Footer } from './components/Footer';
 import { BackgroundEffect } from './components/BackgroundEffect';
 import { Projects } from './components/Projects';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
   return (
-    <div className="min-h-screen bg-transparent text-foreground selection:bg-primary selection:text-background relative">
-      <BackgroundEffect />
-      <Header />
-      <main className="relative z-10">
-        <Hero />
-        <Services />
-        <HowItWorks />
-        <Projects />
-        <About />
-        <Differentiators />
-        <FAQ />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground relative transition-colors duration-300">
+        <BackgroundEffect />
+        <Header />
+        <main className="relative z-10">
+          <Hero />
+          <Services />
+          <HowItWorks />
+          <Projects />
+          <About />
+          <Differentiators />
+          <FAQ />
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </ThemeProvider>
   );
 }
 

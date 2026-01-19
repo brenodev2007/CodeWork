@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -10,13 +11,21 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
-        background: '#050505', // Deep Black
-        foreground: '#F0F0F0', // Off-white
-        primary: '#1D4ED8',    // Deep Professional Blue (Blue-700)
-        secondary: '#6D28D9',  // Deep Violet (Violet-700)
-        accent: '#00FF94',     // Cyber Green
-        surface: 'rgba(255, 255, 255, 0.05)', // Glassmorphism surface
-        "surface-hover": 'rgba(255, 255, 255, 0.1)',
+        border: 'hsl(var(--border))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',

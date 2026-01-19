@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,35 +21,51 @@ export const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b 
-      ${isScrolled ? 'glass' : 'bg-transparent border-transparent shadow-none'}`}
+      ${isScrolled ? 'glass border-border' : 'bg-transparent border-transparent shadow-none'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 md:h-24">
-            <a href="#" className="flex-shrink-0 font-bold text-2xl tracking-tighter text-white">
-              CODE<span className="text-primary">WORK</span>
-              {/* <img src="/logo.png" alt="Codework" className="h-28 w-auto object-contain" /> */}
+            <a href="#" className="flex-shrink-0 font-bold text-2xl tracking-tighter">
+              CODE<span className="text-muted-foreground">WORK</span>
             </a>
           
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex space-x-6">
-              <a href="#services" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">Serviços</a>
-              <a href="#projects" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">Projetos</a>
-              <a href="#differentiators" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">Diferenciais</a>
+              <a href="#services" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Serviços</a>
+              <a href="#projects" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Projetos</a>
+              <a href="#differentiators" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Diferenciais</a>
             </nav>
+            
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-muted transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            
             <a 
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-2 border border-primary text-sm font-medium rounded-full text-primary hover:bg-primary hover:text-black transition-all duration-300 shadow-[0_0_10px_rgba(0,229,255,0.2)] hover:shadow-[0_0_20px_rgba(0,229,255,0.4)]"
+              className="inline-flex items-center justify-center px-6 py-2 border border-foreground text-sm font-medium rounded-full bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300"
             >
               Pedir Orçamento
             </a>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-muted transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 -mr-2 text-white hover:text-primary focus:outline-none"
+              className="p-2 -mr-2 hover:text-muted-foreground focus:outline-none"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -57,17 +75,17 @@ export const Header = () => {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-black/90 backdrop-blur-xl border-t border-white/10 absolute w-full left-0 shadow-2xl">
+        <div className="md:hidden glass border-t border-border absolute w-full left-0 shadow-2xl">
           <div className="px-4 pt-2 pb-6 space-y-1">
-            <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Serviços</a>
-            <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Projetos</a>
-            <a href="#differentiators" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Diferenciais</a>
+            <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md">Serviços</a>
+            <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md">Projetos</a>
+            <a href="#differentiators" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md">Diferenciais</a>
             <div className="pt-4">
               <a 
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="block w-full text-center px-5 py-3 bg-primary text-black font-bold rounded-md hover:bg-white transition-all duration-300"
+                className="block w-full text-center px-5 py-3 bg-foreground text-background font-bold rounded-md hover:bg-background hover:text-foreground hover:border hover:border-foreground transition-all duration-300"
               >
                 Entrar em Contato
               </a>
