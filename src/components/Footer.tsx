@@ -1,9 +1,12 @@
 import { Instagram, ArrowRight, Mail } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import { useState } from 'react';
+import { TermsModal } from './TermsModal';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { theme } = useTheme();
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
   const whatsappLink = "https://wa.me/5511940512636?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codework%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
 
   return (
@@ -95,11 +98,18 @@ export const Footer = () => {
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
             <p>&copy; {currentYear} Codework Development. Todos os direitos reservados.</p>
             <div className="flex gap-6">
-               <a href="#" className="hover:text-foreground transition-colors">Termos de Uso</a>
+               <button 
+                 onClick={() => setIsTermsOpen(true)} 
+                 className="hover:text-foreground transition-colors"
+               >
+                 Termos de Uso
+               </button>
                <a href="#" className="hover:text-foreground transition-colors">Privacidade</a>
             </div>
          </div>
       </div>
+      
+      <TermsModal isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
     </footer>
   );
 };
