@@ -1,7 +1,9 @@
 import { Instagram, ArrowRight, Mail } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { theme } = useTheme();
   const whatsappLink = "https://wa.me/5511940512636?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codework%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
 
   return (
@@ -32,15 +34,19 @@ export const Footer = () => {
           
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-6">
-            <a href="#" className="block font-bold text-2xl tracking-tighter">
-               CODE<span className="text-muted-foreground">WORK</span>
+            <a href="#" className="block">
+               <img 
+                 src={theme === 'dark' ? '/logo-light.png' : '/logo-dark.png'} 
+                 alt="Codework" 
+                 style={{ width: '180px' }}
+               />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
               Desenvolvimento web de alta performance para empresas que buscam resultados reais. Especialistas em React, Node.js e Tailwind CSS.
             </p>
             <div className="flex gap-4">
                {/* Social Placeholders */}
-               <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-foreground hover:text-background transition-colors duration-300 border border-border">
+               <a href="https://www.instagram.com/codeworkbr/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-foreground hover:text-background transition-colors duration-300 border border-border">
                   <Instagram className="w-5 h-5" />
                </a>
                <a href="mailto:codeworkbr.contact@gmail.com" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-foreground hover:text-background transition-colors duration-300 border border-border">

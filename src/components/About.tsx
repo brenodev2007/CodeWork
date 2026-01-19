@@ -87,10 +87,10 @@ export const About = () => {
                       </p>
                    </div>
                    
-                   {/* Divider with gradient */}
+                 
                    <div className="relative h-[2px] bg-gradient-to-r from-transparent via-border to-transparent" />
                    
-                   {/* Stat 2 */}
+                
                    <div className="group">
                       <div className="flex items-center gap-4 mb-4">
                         <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center">
