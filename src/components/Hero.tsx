@@ -20,10 +20,10 @@ export const Hero = () => {
         
         {/* Enhanced heading with decorative elements */}
         <div className="relative mb-8">
-          <div className="absolute -top-8 -left-8 w-16 h-16 border-t-2 border-l-2 border-border" />
-          <div className="absolute -bottom-8 -right-8 w-16 h-16 border-b-2 border-r-2 border-border" />
+          <div className="hidden md:block absolute -top-8 -left-8 w-16 h-16 border-t-2 border-l-2 border-border" />
+          <div className="hidden md:block absolute -bottom-8 -right-8 w-16 h-16 border-b-2 border-r-2 border-border" />
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight max-w-5xl mx-auto leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-5xl mx-auto leading-tight">
             Transformamos Ideias em <br className="hidden md:block" />
             <span className="relative inline-block mt-2">
               <span className="text-gradient">Negócios de Sucesso</span>
@@ -34,7 +34,7 @@ export const Hero = () => {
           </h1>
         </div>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+        <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-light">
           Criação de sites profissionais e modernos que transmitem confiança e aumentam suas vendas. 
           <span className="font-semibold text-foreground"> Especialistas em destacar sua empresa na internet.</span>
         </p>

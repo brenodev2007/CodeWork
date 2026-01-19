@@ -46,7 +46,7 @@ export const Projects = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
             Projetos que{' '}
             <span className="relative inline-block">
               <span className="text-gradient">Definem o Futuro</span>
@@ -54,7 +54,7 @@ export const Projects = () => {
             </span>
           </h2>
           
-          <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
             Uma seleção de trabalhos onde a tecnologia atende ao design de alta performance.
           </p>
         </div>
@@ -99,7 +99,7 @@ export const Projects = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-4xl md:text-5xl font-bold leading-tight group-hover:text-gradient transition-all duration-300">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight group-hover:text-gradient transition-all duration-300">
                   {project.title}
                 </h3>
                 

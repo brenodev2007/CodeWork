@@ -41,7 +41,7 @@ export const FAQ = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
             Dúvidas <span className="text-gradient">Frequentes</span>
           </h2>
           
@@ -82,7 +82,7 @@ export const FAQ = () => {
                       <span className="text-sm font-bold">{index + 1}</span>
                     </div>
                     
-                    <span className={`text-lg lg:text-xl font-bold transition-all ${
+                    <span className={`text-base md:text-lg lg:text-xl font-bold transition-all ${
                       openIndex === index ? 'text-foreground' : 'text-foreground/80 group-hover/button:text-foreground'
                     }`}>
                       {faq.question}
@@ -110,7 +110,7 @@ export const FAQ = () => {
                 >
                   <div className="px-6 lg:px-8 pb-6 lg:pb-8">
                     <div className="pl-14 pt-4 border-t-2 border-border">
-                      <p className="text-muted-foreground leading-relaxed text-base lg:text-lg">
+                      <p className="text-muted-foreground leading-relaxed text-sm md:text-base lg:text-lg">
                         {faq.answer}
                       </p>
                     </div>
@@ -128,7 +128,7 @@ export const FAQ = () => {
           <div className="relative p-8 lg:p-10 rounded-2xl border-2 border-border bg-gradient-to-br from-muted/40 to-background backdrop-blur-sm text-center">
             <MessageCircle className="w-12 h-12 mx-auto mb-4 text-foreground" />
             
-            <h3 className="text-2xl font-bold mb-3">
+            <h3 className="text-xl md:text-2xl font-bold mb-3">
               Não encontrou sua resposta?
             </h3>
             

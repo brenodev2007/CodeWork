@@ -11,17 +11,17 @@ export const Footer = () => {
       {/* Pre-footer CTA */}
       <div className="border-b border-border relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 tracking-tight">
               Pronto para escalar seu negócio?
             </h2>
-            <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
               Não deixe sua ideia parada. Transforme-a em um ativo digital de alta performance hoje mesmo.
             </p>
             <a 
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-10 py-5 bg-foreground text-background rounded-full font-bold text-lg hover:bg-background hover:text-foreground border border-foreground transition-all duration-300 hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 bg-foreground text-background rounded-full font-bold text-base md:text-lg hover:bg-background hover:text-foreground border border-foreground transition-all duration-300 hover:-translate-y-1"
             >
               Começar Projeto Agora
               <ArrowRight className="ml-2 w-5 h-5" />

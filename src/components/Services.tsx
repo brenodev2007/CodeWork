@@ -38,12 +38,12 @@ export const Services = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
             Soluções{' '}
             <span className="text-gradient">Sob Medida</span>
           </h2>
           
-          <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
             Design premium e funcionamento perfeito para entregar{' '}
             <span className="text-foreground font-semibold">resultados reais</span> para sua empresa.
           </p>
@@ -79,7 +79,7 @@ export const Services = () => {
                 
                 {/* Content */}
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold group-hover:text-gradient transition-all">
+                  <h3 className="text-xl md:text-2xl font-bold group-hover:text-gradient transition-all">
                     {service.title}
                   </h3>
                   

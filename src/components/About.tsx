@@ -18,7 +18,7 @@ export const About = () => {
                 Sobre a Codework
               </span>
               
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 tracking-tight leading-tight">
                 Não somos apenas desenvolvedores.{' '}
                 <span className="relative inline-block">
                   <span className="text-gradient">Somos parceiros do seu sucesso.</span>
@@ -64,8 +64,8 @@ export const About = () => {
   
           <div className="relative">
 
-             <div className="absolute -top-6 -right-6 w-24 h-24 border-t-4 border-r-4 border-border rounded-tr-3xl opacity-50" />
-             <div className="absolute -bottom-6 -left-6 w-24 h-24 border-b-4 border-l-4 border-border rounded-bl-3xl opacity-50" />
+             <div className="hidden md:block absolute -top-6 -right-6 w-24 h-24 border-t-4 border-r-4 border-border rounded-tr-3xl opacity-50" />
+             <div className="hidden md:block absolute -bottom-6 -left-6 w-24 h-24 border-b-4 border-l-4 border-border rounded-bl-3xl opacity-50" />
              
       
              <div className="relative p-10 md:p-12 rounded-3xl border-2 border-border bg-gradient-to-br from-muted/40 to-background backdrop-blur-xl shadow-2xl">
@@ -77,7 +77,7 @@ export const About = () => {
                         <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center">
                           <TrendingUp className="w-6 h-6" />
                         </div>
-                        <div className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
+                        <div className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
                           100+
                         </div>
                       </div>
@@ -96,7 +96,7 @@ export const About = () => {
                         <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center">
                           <CheckCircle2 className="w-6 h-6" />
                         </div>
-                        <div className="text-6xl md:text-7xl font-bold bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
+                        <div className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
                           98%
                         </div>
                       </div>

@@ -36,11 +36,11 @@ export const HowItWorks = () => {
             Processo
           </span>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
             O Caminho <span className="text-gradient">Suave</span>
           </h2>
           
-          <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
             Sem processos confusos. Transformamos sua ideia em realidade em{' '}
             <span className="font-bold text-foreground">4 passos simples.</span>
           </p>
@@ -89,7 +89,7 @@ export const HowItWorks = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-gradient transition-all">
+                    <h3 className="text-lg md:text-xl font-bold mb-3 group-hover:text-gradient transition-all">
                       {step.title}
                     </h3>
                     

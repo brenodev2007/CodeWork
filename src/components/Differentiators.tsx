@@ -15,7 +15,7 @@ export const Differentiators = () => {
                 Diferenciais
               </span>
               
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
                 Por que escolher a{' '}
                 <span className="relative inline-block">
                   <span className="text-gradient">Codework?</span>
@@ -71,7 +71,7 @@ export const Differentiators = () => {
                     
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
-                        <h3 className="font-bold text-lg group-hover:text-gradient transition-all">
+                        <h3 className="font-bold text-base md:text-lg group-hover:text-gradient transition-all">
                           {item.title}
                         </h3>
                         <span className="text-xs font-bold px-3 py-1 bg-foreground text-background rounded-full">
@@ -88,14 +88,14 @@ export const Differentiators = () => {
           
           <div className="relative">
              {/* Decorative elements */}
-             <div className="absolute -top-8 -right-8 w-20 h-20 border-t-4 border-r-4 border-border rounded-tr-3xl" />
-             <div className="absolute -bottom-8 -left-8 w-20 h-20 border-b-4 border-l-4 border-border rounded-bl-3xl" />
+             <div className="hidden md:block absolute -top-8 -right-8 w-20 h-20 border-t-4 border-r-4 border-border rounded-tr-3xl" />
+             <div className="hidden md:block absolute -bottom-8 -left-8 w-20 h-20 border-b-4 border-l-4 border-border rounded-bl-3xl" />
              
              <div className="relative z-10 p-10 rounded-3xl border-2 border-border bg-gradient-to-br from-muted/40 to-background backdrop-blur-xl shadow-2xl">
                 <div className="mb-10 pb-6 border-b-2 border-border">
                    <div className="flex items-center gap-3 mb-3">
                      <Award className="w-6 h-6" />
-                     <h3 className="text-2xl font-bold">Comparativo de Mercado</h3>
+                     <h3 className="text-xl md:text-2xl font-bold">Comparativo de Mercado</h3>
                    </div>
                    <p className="text-muted-foreground text-sm flex items-center gap-2">
                      <TrendingUp className="w-4 h-4" />
