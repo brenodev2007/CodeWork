@@ -62,56 +62,85 @@ export const About = () => {
           </div>
 
   
-          <div className="relative">
+          <div className="relative space-y-8">
+             {/* Team Images Grid */}
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+               {/* Image 1 */}
+               <div className="group relative overflow-hidden rounded-2xl border-2 border-border hover:border-foreground/50 transition-all duration-300">
+                 <div className="aspect-[4/3] overflow-hidden">
+                   <img 
+                     src="/IMG_2341.JPG" 
+                     alt="Equipe CodeWork colaborando em projeto"
+                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   />
+                 </div>
 
-             <div className="hidden md:block absolute -top-6 -right-6 w-24 h-24 border-t-4 border-r-4 border-border rounded-tr-3xl opacity-50" />
-             <div className="hidden md:block absolute -bottom-6 -left-6 w-24 h-24 border-b-4 border-l-4 border-border rounded-bl-3xl opacity-50" />
-             
-      
-             <div className="relative p-10 md:p-12 rounded-3xl border-2 border-border bg-gradient-to-br from-muted/40 to-background backdrop-blur-xl shadow-2xl">
-         
-                <div className="space-y-10">
-            
-                   <div className="group">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center">
-                          <TrendingUp className="w-6 h-6" />
-                        </div>
-                        <div className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
-                          100+
-                        </div>
-                      </div>
-                      <div className="font-bold text-xl mb-2">Projetos Entregues</div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        Impactando negócios em todo o Brasil com soluções sob medida.
-                      </p>
-                   </div>
-                   
-                 
-                   <div className="relative h-[2px] bg-gradient-to-r from-transparent via-border to-transparent" />
-                   
-                
-                   <div className="group">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center">
-                          <CheckCircle2 className="w-6 h-6" />
-                        </div>
-                        <div className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
-                          98%
-                        </div>
-                      </div>
-                      <div className="font-bold text-xl mb-2">Satisfação dos Clientes</div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        Compromisso real com o resultado e sucesso do seu negócio.
-                      </p>
-                   </div>
-                </div>
-                
-               
+               </div>
+
+               {/* Image 2 */}
+               <div className="group relative overflow-hidden rounded-2xl border-2 border-border hover:border-foreground/50 transition-all duration-300">
+                 <div className="aspect-[4/3] overflow-hidden">
+                   <img 
+                     src="/IMG_2348.JPG" 
+                     alt="Desenvolvimento de soluções web na CodeWork"
+                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   />
+                 </div>
+
+               </div>
              </div>
-             
-             
-             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-foreground/5 rounded-full opacity-30 blur-[100px]" />
+
+             {/* Statistics Card */}
+             <div className="relative">
+               <div className="hidden md:block absolute -top-6 -right-6 w-24 h-24 border-t-4 border-r-4 border-border rounded-tr-3xl opacity-50" />
+               <div className="hidden md:block absolute -bottom-6 -left-6 w-24 h-24 border-b-4 border-l-4 border-border rounded-bl-3xl opacity-50" />
+               
+        
+               <div className="relative p-10 md:p-12 rounded-3xl border-2 border-border bg-gradient-to-br from-muted/40 to-background backdrop-blur-xl shadow-2xl">
+           
+                  <div className="space-y-10">
+              
+                     <div className="group">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center">
+                            <TrendingUp className="w-6 h-6" />
+                          </div>
+                          <div className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
+                            100+
+                          </div>
+                        </div>
+                        <div className="font-bold text-xl mb-2">Projetos Entregues</div>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          Impactando negócios em todo o Brasil com soluções sob medida.
+                        </p>
+                     </div>
+                     
+                   
+                     <div className="relative h-[2px] bg-gradient-to-r from-transparent via-border to-transparent" />
+                     
+                  
+                     <div className="group">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center">
+                            <CheckCircle2 className="w-6 h-6" />
+                          </div>
+                          <div className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
+                            98%
+                          </div>
+                        </div>
+                        <div className="font-bold text-xl mb-2">Satisfação dos Clientes</div>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          Compromisso real com o resultado e sucesso do seu negócio.
+                        </p>
+                     </div>
+                  </div>
+                  
+                 
+               </div>
+               
+               
+               <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-foreground/5 rounded-full opacity-30 blur-[100px]" />
+             </div>
           </div>
 
         </div>
