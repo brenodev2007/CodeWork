@@ -140,19 +140,7 @@ export const Hero = () => {
               </a>
             </div>
 
-            {/* Metrics strip */}
-            <div className="flex items-center justify-center lg:justify-start gap-8 pt-4 border-t border-border">
-              {[
-                { value: '100+', label: 'Projetos' },
-                { value: '<7d', label: 'Entrega' },
-                { value: '24/7', label: 'Suporte' },
-              ].map((metric, i) => (
-                <div key={i} className="text-center lg:text-left">
-                  <div className="text-2xl md:text-3xl font-bold tracking-tight">{metric.value}</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">{metric.label}</div>
-                </div>
-              ))}
-            </div>
+
           </div>
 
           {/* Right: Interactive Terminal */}
