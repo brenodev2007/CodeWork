@@ -118,7 +118,7 @@ export const TermsModal = ({ isOpen, onClose }: TermsModalProps) => {
         <div className="sticky bottom-0 bg-background border-t border-border px-6 py-4 flex justify-end">
           <button
             onClick={onClose}
-            className="px-6 py-2.5 bg-foreground text-background rounded-full font-semibold hover:bg-background hover:text-foreground border border-foreground transition-all duration-300"
+            className="px-6 py-2.5 bg-foreground text-background rounded-lg font-semibold hover:bg-background hover:text-foreground border border-foreground transition-all duration-300"
           >
             Entendi
           </button>

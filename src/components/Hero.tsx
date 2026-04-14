@@ -1,116 +1,222 @@
-import { ArrowRight, Code, Cpu, Layers, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, Zap, ChevronRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+
+const roles = [
+  'Sites que Vendem',
+  'Sistemas sob Medida',
+  'Marcas que Impactam',
+  'Bugs Resolvidos',
+];
+
+const terminalLines = [
+  { prompt: '~', cmd: 'codework init meu-projeto', delay: 0 },
+  { prompt: '', cmd: '✓ Análise de requisitos concluída', delay: 800 },
+  { prompt: '', cmd: '✓ Design responsivo aplicado', delay: 1400 },
+  { prompt: '', cmd: '✓ SEO otimizado para Google', delay: 2000 },
+  { prompt: '', cmd: '✓ Performance: 98/100', delay: 2600 },
+  { prompt: '', cmd: '', delay: 3200 },
+  { prompt: '~', cmd: 'deploy --production', delay: 3400 },
+  { prompt: '', cmd: '🚀 Site publicado com sucesso!', delay: 4000 },
+];
 
 export const Hero = () => {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [visibleLines, setVisibleLines] = useState(0);
+  const [terminalStarted, setTerminalStarted] = useState(false);
+  const terminalRef = useRef<HTMLDivElement>(null);
+
   const whatsappLink = "https://wa.me/5511940512636?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codework%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
 
-  return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center justify-center min-h-[90vh]">
-      {/* Enhanced Background decorations */}
-      <div className="absolute inset-0 pattern-dots opacity-30 -z-20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-muted/30 to-transparent rounded-full blur-3xl -z-10 animate-pulse" />
-      <div className="absolute top-20 right-20 w-72 h-72 bg-foreground/5 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-foreground/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
-        {/* Enhanced badge */}
-        <div className="inline-flex items-center px-6 py-3 rounded-full border-2 border-border bg-muted/50 backdrop-blur-sm mb-8 animate-fade-in-up shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-          <Sparkles className="w-4 h-4 mr-3 text-foreground animate-pulse" />
-          <span className="text-sm font-semibold uppercase tracking-widest">Disponível para novos projetos</span>
-        </div>
-        
-        {/* Enhanced heading with decorative elements */}
-        <div className="relative mb-8">
-          <div className="hidden md:block absolute -top-8 -left-8 w-16 h-16 border-t-2 border-l-2 border-border" />
-          <div className="hidden md:block absolute -bottom-8 -right-8 w-16 h-16 border-b-2 border-r-2 border-border" />
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-5xl mx-auto leading-tight">
-            Transformamos Ideias em <br className="hidden md:block" />
-            <span className="relative inline-block mt-2">
-              <span className="text-gradient">Negócios de Sucesso</span>
-              <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 500 12" fill="none">
-                <path d="M0 6 Q250 12, 500 6" stroke="currentColor" strokeWidth="2" fill="none" className="text-foreground" />
-              </svg>
-            </span>
-          </h1>
-        </div>
-        
-        <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-          Criação de sites profissionais e modernos que transmitem confiança e aumentam suas vendas. 
-          <span className="font-semibold text-foreground"> Especialistas em destacar sua empresa na internet.</span>
-        </p>
-        
-        {/* Enhanced CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full mb-20">
-          <a 
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative w-full sm:w-auto px-10 py-5 bg-foreground text-background rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden"
-          >
-            <span className="absolute inset-0 bg-gradient-to-r from-foreground via-muted-foreground to-foreground bg-[length:200%_100%] animate-gradient" />
-            <span className="relative flex items-center gap-2">
-              <Zap className="w-5 h-5" />
-              Orçamento Gratuito
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </a>
-          
-          <a 
-            href="#projects"
-            className="group w-full sm:w-auto px-10 py-5 relative rounded-full font-semibold text-lg transition-all duration-300 flex items-center justify-center backdrop-blur-md border-2 border-border hover:border-foreground hover:bg-muted hover:scale-105 shadow-lg"
-          >
-            Ver Portfolio
-          </a>
-        </div>
+  // Rotating text effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+        setIsTransitioning(false);
+      }, 400);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-        {/* Enhanced feature showcase */}
-        <div className="mt-12 border-t-2 border-border pt-12 w-full max-w-5xl">
-           <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-10 flex items-center justify-center gap-2">
-             <span className="w-8 h-[2px] bg-border" />
-             Nossas Ferramentas
-             <span className="w-8 h-[2px] bg-border" />
-           </p>
-           
-           <div className="grid grid-cols-3 gap-8 md:gap-16">
-              <div className="flex flex-col items-center gap-4 group cursor-pointer">
-                 <div className="relative">
-                   <div className="absolute inset-0 bg-foreground/10 blur-xl rounded-full group-hover:bg-foreground/20 transition-all" />
-                   <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-muted to-background border-2 border-border group-hover:border-foreground shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                      <Code className="w-8 h-8 md:w-10 md:h-10 text-foreground" />
-                   </div>
-                 </div>
-                 <div className="text-center">
-                   <span className="font-bold text-base md:text-lg block group-hover:text-foreground transition-colors">Interativo</span>
-                   <span className="text-xs text-muted-foreground">UX Premium</span>
-                 </div>
-              </div>
+  // Terminal typing effect with Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !terminalStarted) {
+          setTerminalStarted(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (terminalRef.current) {
+      observer.observe(terminalRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [terminalStarted]);
+
+  useEffect(() => {
+    if (!terminalStarted) return;
+
+    terminalLines.forEach((line, index) => {
+      setTimeout(() => {
+        setVisibleLines(index + 1);
+      }, line.delay);
+    });
+  }, [terminalStarted]);
+
+  return (
+    <section
+      className="relative pt-28 pb-16 md:pt-40 md:pb-24 overflow-hidden min-h-screen flex items-center"
+      aria-label="Empresa de desenvolvimento web e criação de sites"
+    >
+      {/* Subtle grid background */}
+      <div 
+        className="absolute inset-0 -z-10 opacity-[0.03]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          {/* Left: Text Content */}
+          <div className="space-y-8 text-center lg:text-left">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full border border-border bg-muted/40 gap-2">
+              <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
+              <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Disponível para novos projetos</span>
+            </div>
+
+            {/* Main heading */}
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1]">
+                Criamos{' '}
+                <span className="relative inline-block">
+                  <span 
+                    className={`inline-block transition-all duration-300 ${
+                      isTransitioning 
+                        ? 'opacity-0 translate-y-4' 
+                        : 'opacity-100 translate-y-0'
+                    }`}
+                    style={{ minWidth: '280px' }}
+                  >
+                    {roles[roleIndex]}
+                  </span>
+                  <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-foreground" />
+                </span>
+              </h1>
               
-              <div className="flex flex-col items-center gap-4 group cursor-pointer">
-                 <div className="relative">
-                   <div className="absolute inset-0 bg-foreground/10 blur-xl rounded-full group-hover:bg-foreground/20 transition-all" />
-                   <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-muted to-background border-2 border-border group-hover:border-foreground shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                      <Cpu className="w-8 h-8 md:w-10 md:h-10 text-foreground" />
-                   </div>
-                 </div>
-                 <div className="text-center">
-                   <span className="font-bold text-base md:text-lg block group-hover:text-foreground transition-colors">Rápido</span>
-                   <span className="text-xs text-muted-foreground">Performance</span>
-                 </div>
-              </div>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
+                Sites profissionais, sistemas web e posicionamento
+                digital para empresas que querem{' '}
+                <span className="text-foreground font-semibold">crescer de verdade.</span>
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4">
+              <a 
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group w-full sm:w-auto px-8 py-4 bg-foreground text-background rounded-lg font-bold text-base transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2"
+              >
+                <Zap className="w-4 h-4" />
+                Orçamento Gratuito
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
               
-              <div className="flex flex-col items-center gap-4 group cursor-pointer">
-                 <div className="relative">
-                   <div className="absolute inset-0 bg-foreground/10 blur-xl rounded-full group-hover:bg-foreground/20 transition-all" />
-                   <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-muted to-background border-2 border-border group-hover:border-foreground shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                      <Layers className="w-8 h-8 md:w-10 md:h-10 text-foreground" />
-                   </div>
-                 </div>
-                 <div className="text-center">
-                   <span className="font-bold text-base md:text-lg block group-hover:text-foreground transition-colors">Moderno</span>
-                   <span className="text-xs text-muted-foreground">Tecnologia</span>
-                 </div>
+              <a 
+                href="#projects"
+                className="w-full sm:w-auto px-8 py-4 rounded-lg font-semibold text-base transition-all duration-300 flex items-center justify-center border border-border hover:border-foreground hover:bg-muted/50"
+              >
+                Ver Projetos
+              </a>
+            </div>
+
+            {/* Metrics strip */}
+            <div className="flex items-center justify-center lg:justify-start gap-8 pt-4 border-t border-border">
+              {[
+                { value: '100+', label: 'Projetos' },
+                { value: '<7d', label: 'Entrega' },
+                { value: '24/7', label: 'Suporte' },
+              ].map((metric, i) => (
+                <div key={i} className="text-center lg:text-left">
+                  <div className="text-2xl md:text-3xl font-bold tracking-tight">{metric.value}</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">{metric.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Interactive Terminal */}
+          <div ref={terminalRef} className="relative">
+            {/* Terminal window */}
+            <div className="rounded-xl border border-border overflow-hidden shadow-lg bg-background">
+              {/* Terminal header */}
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-muted/30">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-foreground/20" />
+                  <div className="w-3 h-3 rounded-full bg-foreground/20" />
+                  <div className="w-3 h-3 rounded-full bg-foreground/20" />
+                </div>
+                <span className="text-xs text-muted-foreground font-mono ml-2">terminal — codework</span>
               </div>
-           </div>
+
+              {/* Terminal body */}
+              <div className="p-5 md:p-6 font-mono text-sm md:text-base space-y-2 min-h-[280px] md:min-h-[320px]">
+                {terminalLines.slice(0, visibleLines).map((line, i) => (
+                  <div 
+                    key={i} 
+                    className="flex items-start gap-2 animate-fade-in-up"
+                    style={{ animationDelay: `${i * 50}ms` }}
+                  >
+                    {line.prompt ? (
+                      <>
+                        <span className="text-muted-foreground select-none shrink-0">
+                          <ChevronRight className="w-4 h-4 mt-0.5" />
+                        </span>
+                        <span className="text-foreground font-medium">{line.cmd}</span>
+                      </>
+                    ) : line.cmd ? (
+                      <span className={`ml-6 ${
+                        line.cmd.startsWith('✓') 
+                          ? 'text-foreground' 
+                          : line.cmd.startsWith('🚀')
+                            ? 'text-foreground font-bold'
+                            : 'text-muted-foreground'
+                      }`}>
+                        {line.cmd}
+                      </span>
+                    ) : (
+                      <span className="h-4" />
+                    )}
+                  </div>
+                ))}
+                
+                {/* Blinking cursor */}
+                {visibleLines >= terminalLines.length && (
+                  <div className="flex items-center gap-2">
+                    <ChevronRight className="w-4 h-4 text-muted-foreground" />
+                    <span className="w-2.5 h-5 bg-foreground animate-pulse" />
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Floating label */}
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
+              <div className="px-4 py-1.5 rounded-full bg-foreground text-background text-xs font-bold tracking-wider uppercase shadow-sm">
+                Automatizamos Resultados
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

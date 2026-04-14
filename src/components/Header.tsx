@@ -29,8 +29,7 @@ export const Header = () => {
               <img 
                 src={theme === 'dark' ? '/logo-light.png' : '/logo-dark.png'} 
                 alt="Codework" 
-                className="w-auto object-contain transition-opacity duration-300"
-                style={{ height: '160px' }}
+                className="h-10 md:h-12 w-auto object-contain transition-opacity duration-300"
               />
             </a>
           
@@ -53,7 +52,7 @@ export const Header = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-2 border border-foreground text-sm font-medium rounded-full bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-2 border border-foreground text-sm font-medium rounded-lg bg-foreground text-background hover:bg-background hover:text-foreground transition-all duration-300"
             >
               Pedir Orçamento
             </a>
@@ -80,7 +79,7 @@ export const Header = () => {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass border-t border-border absolute w-full left-0 shadow-2xl">
+        <div className="md:hidden glass border-t border-border absolute w-full left-0 shadow-lg">
           <div className="px-4 pt-2 pb-6 space-y-1">
             <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md">Serviços</a>
             <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-md">Projetos</a>

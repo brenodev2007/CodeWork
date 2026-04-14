@@ -24,7 +24,7 @@ export const Footer = () => {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 bg-foreground text-background rounded-full font-bold text-base md:text-lg hover:bg-background hover:text-foreground border border-foreground transition-all duration-300 hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 bg-foreground text-background rounded-lg font-bold text-base md:text-lg hover:bg-background hover:text-foreground border border-foreground transition-all duration-300"
             >
               Começar Projeto Agora
               <ArrowRight className="ml-2 w-5 h-5" />

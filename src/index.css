@@ -15,6 +15,7 @@
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
     --border: 0 0% 89.8%;
+
   }
   
   .dark {
@@ -27,6 +28,7 @@
     --accent: 0 0% 14.9%;
     --accent-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
+
   }
 
   * {
@@ -78,53 +80,6 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
-  
-  .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--muted-foreground)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-  
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient 8s ease infinite;
-  }
-  
-  .pattern-dots {
-    background-image: radial-gradient(hsl(var(--muted-foreground) / 0.15) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-  
-  .pattern-grid {
-    background-image: 
-      linear-gradient(hsl(var(--border)) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px);
-    background-size: 50px 50px;
-  }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes glow {
-  from { box-shadow: 0 0 5px hsl(var(--foreground) / 0.2), 0 0 10px hsl(var(--foreground) / 0.1); }
-  to { box-shadow: 0 0 20px hsl(var(--foreground) / 0.3), 0 0 30px hsl(var(--foreground) / 0.2); }
-}
-
-@keyframes gradient {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
 }
 
 html {

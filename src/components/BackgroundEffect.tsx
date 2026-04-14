@@ -47,7 +47,7 @@ export const BackgroundEffect = () => {
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = 'rgba(0, 229, 255, 0.1)'; // Primary color with low opacity
+        ctx.fillStyle = 'rgba(128, 128, 128, 0.08)'; // Neutral gray with low opacity
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -67,7 +67,7 @@ export const BackgroundEffect = () => {
       ctx.clearRect(0, 0, w, h);
       
       // Draw connections
-      ctx.strokeStyle = 'rgba(0, 229, 255, 0.05)';
+      ctx.strokeStyle = 'rgba(128, 128, 128, 0.04)';
       ctx.lineWidth = 0.5;
       
       for (let i = 0; i < particles.length; i++) {
