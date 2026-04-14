@@ -41,7 +41,7 @@ export const Footer = () => {
                <img 
                  src={theme === 'dark' ? '/logo-light.png' : '/logo-dark.png'} 
                  alt="Codework" 
-                 style={{ width: '180px' }}
+                 className="h-32 md:h-40 w-auto object-contain"
                />
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">

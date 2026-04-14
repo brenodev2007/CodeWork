@@ -25,11 +25,11 @@ export const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 md:h-24">
-            <a href="#" className="flex-shrink-0">
+            <a href="#" className="flex-shrink-0 flex items-center">
               <img 
                 src={theme === 'dark' ? '/logo-light.png' : '/logo-dark.png'} 
                 alt="Codework" 
-                className="h-10 md:h-12 w-auto object-contain transition-opacity duration-300"
+                className="h-24 md:h-40 w-auto object-contain transition-opacity duration-300"
               />
             </a>
           
