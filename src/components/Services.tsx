@@ -52,16 +52,16 @@ export const Services = () => {
               className="group relative"
             >
               {/* Card */}
-              <div className="relative h-full p-8 lg:p-10 rounded-2xl border border-border bg-muted/20 hover:border-foreground/40 hover:shadow-md transition-all duration-300">
+              <div className="relative h-full p-8 lg:p-10 rounded-2xl border border-border bg-muted/20 hover:border-foreground/40 hover:shadow-md transition-all duration-300 text-center md:text-left">
                 {/* Badge */}
-                <div className="absolute -top-3 -right-3">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:-right-3">
                   <span className="inline-block px-3 py-1 text-xs font-bold bg-foreground text-background rounded-full shadow-sm">
                     {service.badge}
                   </span>
                 </div>
                 
                 {/* Icon container */}
-                <div className="mb-8">
+                <div className="mb-8 flex justify-center md:justify-start">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-muted to-background border border-border group-hover:border-foreground/60 flex items-center justify-center shadow-sm transition-all duration-300">
                     <service.icon className="w-8 h-8 text-muted-foreground group-hover:text-foreground transition-colors" />
                   </div>

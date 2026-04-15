@@ -18,7 +18,7 @@ export const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-border">
           
           {/* Q1 — Top Left: Text */}
-          <div className="relative flex flex-col justify-center p-10 md:p-14 lg:p-16 bg-foreground text-primary-foreground min-h-[340px] md:min-h-[400px]">
+          <div className="relative flex flex-col justify-center p-10 md:p-14 lg:p-16 bg-foreground text-primary-foreground min-h-[240px] md:min-h-[400px]">
             {/* Decorative corner accent */}
             <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-primary-foreground/30" />
             <div className="absolute bottom-6 right-6 opacity-10">
@@ -40,7 +40,7 @@ export const About = () => {
           </div>
 
           {/* Q2 — Top Right: Image 1 */}
-          <div className="group relative overflow-hidden min-h-[340px] md:min-h-[400px]">
+          <div className="group relative overflow-hidden min-h-[240px] md:min-h-[400px]">
             <img 
               src="/IMG_2341.JPG" 
               alt="Equipe CodeWork colaborando em projeto"
@@ -51,7 +51,7 @@ export const About = () => {
           </div>
 
           {/* Q3 — Bottom Left: Image 2 */}
-          <div className="group relative overflow-hidden min-h-[340px] md:min-h-[400px] order-4 md:order-3">
+          <div className="group relative overflow-hidden min-h-[240px] md:min-h-[400px] order-4 md:order-3">
             <img 
               src="/IMG_2348.JPG" 
               alt="Desenvolvimento de soluções web na CodeWork"
@@ -62,7 +62,7 @@ export const About = () => {
           </div>
 
           {/* Q4 — Bottom Right: Text */}
-          <div className="relative flex flex-col justify-center p-10 md:p-14 lg:p-16 bg-muted/30 min-h-[340px] md:min-h-[400px] order-3 md:order-4">
+          <div className="relative flex flex-col justify-center p-10 md:p-14 lg:p-16 bg-muted/30 min-h-[240px] md:min-h-[400px] order-3 md:order-4">
             {/* Decorative corner accent */}
             <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-foreground/20" />
             <div className="absolute top-6 left-6 opacity-5">

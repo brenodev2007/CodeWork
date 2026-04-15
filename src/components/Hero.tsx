@@ -5,7 +5,7 @@ const roles = [
   'Sites que Vendem',
   'Sistemas sob Medida',
   'Marcas que Impactam',
-  'Bugs Resolvidos',
+  'Experiências que Ficam',
 ];
 
 const terminalLines = [
@@ -99,12 +99,11 @@ export const Hero = () => {
                 Criamos{' '}
                 <span className="relative inline-block">
                   <span 
-                    className={`inline-block transition-all duration-300 ${
+                    className={`inline-block transition-all duration-300 w-full sm:w-auto sm:min-w-[280px] ${
                       isTransitioning 
                         ? 'opacity-0 translate-y-4' 
                         : 'opacity-100 translate-y-0'
                     }`}
-                    style={{ minWidth: '280px' }}
                   >
                     {roles[roleIndex]}
                   </span>
@@ -158,7 +157,7 @@ export const Hero = () => {
               </div>
 
               {/* Terminal body */}
-              <div className="p-5 md:p-6 font-mono text-sm md:text-base space-y-2 min-h-[280px] md:min-h-[320px]">
+              <div className="p-5 md:p-6 font-mono text-sm md:text-base space-y-2 min-h-[240px] sm:min-h-[280px] md:min-h-[320px]">
                 {terminalLines.slice(0, visibleLines).map((line, i) => (
                   <div 
                     key={i} 
@@ -199,8 +198,8 @@ export const Hero = () => {
             </div>
 
             {/* Floating label */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2">
-              <div className="px-4 py-1.5 rounded-full bg-foreground text-background text-xs font-bold tracking-wider uppercase shadow-sm">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-max">
+              <div className="px-4 py-1.5 rounded-full bg-foreground text-background text-xs font-bold tracking-wider uppercase shadow-sm whitespace-nowrap">
                 Automatizamos Resultados
               </div>
             </div>
