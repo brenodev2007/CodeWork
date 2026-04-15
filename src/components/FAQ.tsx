@@ -22,7 +22,7 @@ const faqs = [
 
 export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const whatsappLink = "https://wa.me/5511940512636?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codework%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas.";
+  const whatsappLink = "https://wa.me/5511991067870?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Codework%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas.";
 
   return (
     <section className="py-24 relative overflow-hidden bg-gradient-to-b from-background via-muted/5 to-background">

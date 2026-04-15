@@ -3,7 +3,6 @@ import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { HowItWorks } from './components/HowItWorks';
 import { About } from './components/About';
-import { Differentiators } from './components/Differentiators';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { BackgroundEffect } from './components/BackgroundEffect';
@@ -23,7 +22,6 @@ function App() {
           <HowItWorks />
           <Projects />
           <About />
-          <Differentiators />
           <FAQ />
         </main>
         <Footer />

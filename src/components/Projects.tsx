@@ -6,17 +6,15 @@ const projects = [
     category: 'Desenvolvimento Web',
     icon: Globe,
     image: '/projects/felix-cell.png',
-    description: 'Sites institucionais, landing pages e lojas virtuais criados do zero. Design moderno, responsivo e otimizado para converter visitantes em clientes.',
-    tech: ['React', 'Next.js', 'Tailwind CSS'],
+    description: 'Sites institucionais e landing pages criados do zero. Design moderno, responsivo e otimizado para converter visitantes em clientes.',
     highlights: ['Design Responsivo', 'SEO Otimizado', 'Alta Performance'],
   },
   {
     title: 'Sistemas Web Sob Medida',
     category: 'Soluções Web',
     icon: Code,
-    image: '/projects/sistemas-web.png',
+    image: '/projects/crm-dashboard.png',
     description: 'Painéis administrativos, dashboards, CRMs e plataformas completas feitas sob medida para automatizar e escalar as operações do seu negócio.',
-    tech: ['Node.js', 'TypeScript', 'PostgreSQL'],
     highlights: ['Automação', 'Integração de APIs', 'Escalável'],
   },
   {
@@ -25,17 +23,15 @@ const projects = [
     icon: Bug,
     image: '/projects/bug-fixing.png',
     description: 'Seu site com problemas? Corrigimos erros, melhoramos a velocidade e garantimos que tudo funcione perfeitamente em qualquer dispositivo.',
-    tech: ['Debug', 'Performance', 'Segurança'],
     highlights: ['Diagnóstico Rápido', 'Correção Eficiente', 'Monitoramento'],
   },
   {
-    title: 'Posicionamento de Marca',
-    category: 'Branding Digital',
+    title: 'Gestão de Tráfego e SEO',
+    category: 'Marketing Digital',
     icon: Palette,
     image: '/projects/analytics.png',
-    description: 'Construímos a presença digital da sua marca com identidade visual consistente, estratégia de conteúdo e posicionamento que transmite autoridade e confiança.',
-    tech: ['Identidade Visual', 'Estratégia Digital', 'SEO'],
-    highlights: ['Branding Completo', 'Presença Online', 'Autoridade'],
+    description: 'Gerenciamos campanhas de tráfego pago e SEO para aumentar a visibilidade do seu site e atrair mais clientes, visando seu público alvo.',
+    highlights: ['Gestão de Trafego', 'Presença Online', 'SEO'],
   },
 ];
 
@@ -56,8 +52,8 @@ export const Projects = () => {
           </h2>
           
           <p className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Criamos soluções web completas — do site à marca — para empresas que querem{' '}
-            <span className="text-foreground font-semibold">resultados reais na internet.</span>
+           Soluções realizadas pela 
+            <span className="text-foreground font-semibold"> CodeWork</span>
           </p>
         </div>
 
@@ -117,18 +113,6 @@ export const Projects = () => {
                       className="text-xs font-semibold px-3 py-1.5 rounded-full bg-foreground text-background"
                     >
                       {h}
-                    </span>
-                  ))}
-                </div>
-                
-                {/* Tech tags */}
-                <div className="flex flex-wrap gap-3 pt-2">
-                  {project.tech.map((t, i) => (
-                    <span 
-                      key={i} 
-                      className="text-sm font-medium px-4 py-2 rounded-full border border-border bg-muted/30 cursor-default"
-                    >
-                      {t}
                     </span>
                   ))}
                 </div>

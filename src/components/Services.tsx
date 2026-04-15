@@ -39,8 +39,8 @@ export const Services = () => {
           </h2>
           
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-            Design premium e funcionamento perfeito para entregar{' '}
-            <span className="text-foreground font-semibold">resultados reais</span> para sua empresa.
+          
+            <span className="text-foreground font-semibold">Resultados reais</span> para sua empresa.
           </p>
         </div>
 
