@@ -61,6 +61,8 @@ export const FAQ = () => {
                 <button
                   className="w-full flex items-center justify-between p-6 lg:p-8 text-left focus:outline-none group/button"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  aria-expanded={openIndex === index}
+                  aria-label={`${faq.question} — ${openIndex === index ? 'Recolher' : 'Expandir'} resposta`}
                 >
                   <div className="flex items-start gap-4 flex-1">
                     <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${

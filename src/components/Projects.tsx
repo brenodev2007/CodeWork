@@ -65,7 +65,7 @@ export const Projects = () => {
               className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 md:gap-16 items-center group relative`}
             >
               {/* Decorative number */}
-              <div className={`absolute -top-10 ${index % 2 === 0 ? 'left-0' : 'right-0'} text-8xl lg:text-9xl font-bold text-muted/10 select-none hidden lg:block`}>
+              <div className={`absolute -top-10 ${index % 2 === 0 ? 'left-0' : 'right-0'} text-8xl lg:text-9xl font-bold text-muted/10 select-none hidden lg:block`} aria-hidden="true">
                 0{index + 1}
               </div>
               
@@ -77,7 +77,7 @@ export const Projects = () => {
                     alt={project.title} 
                     className="w-full aspect-video object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60 group-hover:opacity-0 transition-opacity duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60 group-hover:opacity-0 transition-opacity duration-700" aria-hidden="true" />
                   
                   {/* Icon overlay */}
                   <div className="absolute top-4 left-4">

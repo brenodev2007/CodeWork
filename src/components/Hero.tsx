@@ -76,6 +76,7 @@ export const Hero = () => {
       {/* Subtle grid background */}
       <div 
         className="absolute inset-0 -z-10 opacity-[0.03]"
+        aria-hidden="true"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
           backgroundSize: '60px 60px'
@@ -89,7 +90,7 @@ export const Hero = () => {
           <div className="space-y-8 text-center lg:text-left">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full border border-border bg-muted/40 gap-2">
-              <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" aria-hidden="true" />
               <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Disponível para novos projetos</span>
             </div>
 
@@ -143,7 +144,7 @@ export const Hero = () => {
           </div>
 
           {/* Right: Interactive Terminal */}
-          <div ref={terminalRef} className="relative">
+          <div ref={terminalRef} className="relative" aria-hidden="true">
             {/* Terminal window */}
             <div className="rounded-xl border border-border overflow-hidden shadow-lg bg-background">
               {/* Terminal header */}
@@ -198,7 +199,7 @@ export const Hero = () => {
             </div>
 
             {/* Floating label */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-max">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-max" aria-hidden="true">
               <div className="px-4 py-1.5 rounded-full bg-foreground text-background text-xs font-bold tracking-wider uppercase shadow-sm whitespace-nowrap">
                 Automatizamos Resultados
               </div>

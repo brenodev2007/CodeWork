@@ -44,7 +44,7 @@ export const HowItWorks = () => {
 
         <div className="relative">
           {/* Connecting line */}
-          <div className="hidden md:block absolute top-16 left-0 w-full h-[1px] -z-10">
+          <div className="hidden md:block absolute top-16 left-0 w-full h-[1px] -z-10" aria-hidden="true">
             <div className="h-full bg-gradient-to-r from-transparent via-border to-transparent" />
           </div>
           
@@ -54,6 +54,7 @@ export const HowItWorks = () => {
               key={i}
               className="hidden md:block absolute top-16 text-muted-foreground/30"
               style={{ left: `${25 + i * 25}%`, transform: 'translateX(-50%)' }}
+              aria-hidden="true"
             >
               <ArrowRight className="w-6 h-6" />
             </div>
